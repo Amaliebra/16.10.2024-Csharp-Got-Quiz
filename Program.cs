@@ -1,9 +1,9 @@
-﻿namespace _16._10._2024_Quiz_C_;
-
+﻿namespace GotQuiz;
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Quiz quiz = new Quiz();
+        QuizManager quizManager = new QuizManager(quiz);
     }
 }

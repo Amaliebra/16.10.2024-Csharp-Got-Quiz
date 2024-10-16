@@ -1,4 +1,4 @@
-
+namespace GotQuiz;
 public class quizList
 {
     public Dictionary<int, string> quizQuestion = new Dictionary<int, string>();
