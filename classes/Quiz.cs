@@ -1,5 +1,5 @@
 namespace GotQuiz;
-public class quizList
+public class Quiz
 {
     public Dictionary<int, string> quizQuestion = new Dictionary<int, string>();
     public Dictionary<int, List<string>> quizAnswers = new Dictionary<int, List<string>>();

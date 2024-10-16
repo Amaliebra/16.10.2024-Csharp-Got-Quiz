@@ -1,7 +1,7 @@
 namespace GotQuiz;
 public class QuizManager
 {
-    private GotQuiz.Quiz quiz;
+    public Quiz quiz;
 
     public QuizManager(Quiz quiz)
     {
