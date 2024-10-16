@@ -44,6 +44,5 @@ public class Quiz
         quizAnswers[3].Add("Rhaegal");
         quizAnswers[3].Add("Drogon");
         //-------------------------
-
     }
 }

@@ -7,6 +7,5 @@ public class Program
     {
         Quiz quiz = new Quiz();
         QuizManager quizManager = new QuizManager(quiz);
-        Console.WriteLine(quiz);
     }
 }
