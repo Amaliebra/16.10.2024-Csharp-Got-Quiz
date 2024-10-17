@@ -17,11 +17,23 @@ public class Quiz
         correctAnswers.Add(3, "Rhaegal");
         //---------------------
         quizQuestion.Add(4, "");
+        correctAnswers.Add(4,"");
+        //---------------------
         quizQuestion.Add(5, "");
+        correctAnswers.Add(5,"");
+        //---------------------
         quizQuestion.Add(6, "");
+        correctAnswers.Add(6,"");
+        //---------------------
         quizQuestion.Add(7, "");
+        correctAnswers.Add(7,"");
+        //---------------------
         quizQuestion.Add(8, "");
+        correctAnswers.Add(8,"");
+        //---------------------
         quizQuestion.Add(9, "");
+        correctAnswers.Add(9,"");
+        //---------------------
         quizQuestion.Add(10, "");
         quizQuestion.Add(11, "");
         quizQuestion.Add(12, "");
@@ -44,5 +56,20 @@ public class Quiz
         quizAnswers[3].Add("Rhaegal");
         quizAnswers[3].Add("Drogon");
         //-------------------------
+        quizAnswers[4].Add("");
+        quizAnswers[4].Add("");
+        quizAnswers[4].Add("");
+        quizAnswers[4].Add("");
+        //------------------------
+        quizAnswers[5].Add("");
+        quizAnswers[5].Add("");
+        quizAnswers[5].Add("");
+        quizAnswers[5].Add("");
+        //-----------------------
+        quizAnswers[6].Add("");
+        quizAnswers[6].Add("");
+        quizAnswers[6].Add("");
+        quizAnswers[6].Add("");
+        //------------------------
     }
 }

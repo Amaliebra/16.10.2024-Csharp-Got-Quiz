@@ -10,9 +10,14 @@ public class QuizManager
 
     public void StartQuiz()
     {
+        int userScore = 0;
+
         foreach (var question in quiz.quizQuestion)
         {
-            Console.WriteLine(question.Value);
+            int questionId = question.Key;
+            string questionText = question.Value;
+
+            Console.WriteLine($"\n Question: {questionId}");
         }
     }
 }
