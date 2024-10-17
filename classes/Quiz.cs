@@ -5,6 +5,13 @@ public class Quiz
     public Dictionary<int, List<string>> quizAnswers = new Dictionary<int, List<string>>();
     public Dictionary<int, string> correctAnswers = new Dictionary<int, string>();
 
+    public Quiz()
+    {
+        // AddQuestion();
+        // AddAnswer();
+
+    }
+
     public void AddQuestion(int questionId, string question)
     {
         quizQuestion.Add(1, "What is the last thing Hodor says?");
@@ -17,22 +24,22 @@ public class Quiz
         correctAnswers.Add(3, "Rhaegal");
         //---------------------
         quizQuestion.Add(4, "");
-        correctAnswers.Add(4,"");
+        correctAnswers.Add(4, "");
         //---------------------
         quizQuestion.Add(5, "");
-        correctAnswers.Add(5,"");
+        correctAnswers.Add(5, "");
         //---------------------
         quizQuestion.Add(6, "");
-        correctAnswers.Add(6,"");
+        correctAnswers.Add(6, "");
         //---------------------
         quizQuestion.Add(7, "");
-        correctAnswers.Add(7,"");
+        correctAnswers.Add(7, "");
         //---------------------
         quizQuestion.Add(8, "");
-        correctAnswers.Add(8,"");
+        correctAnswers.Add(8, "");
         //---------------------
         quizQuestion.Add(9, "");
-        correctAnswers.Add(9,"");
+        correctAnswers.Add(9, "");
         //---------------------
         quizQuestion.Add(10, "");
         quizQuestion.Add(11, "");
@@ -41,35 +48,8 @@ public class Quiz
 
     public void AddAnswer(int questionId, string answer)
     {
-        quizAnswers[1].Add("Hodor");
-        quizAnswers[1].Add("Hold the door");
-        quizAnswers[1].Add("i'm holding the door");
-        quizAnswers[1].Add("Save me");
-        //--------------------------
-        quizAnswers[2].Add("Jorah Mormont");
-        quizAnswers[2].Add("Aemon");
-        quizAnswers[2].Add("Jeor Mormont");
-        quizAnswers[2].Add("Alliser Thorne");
-        //-------------------------
-        quizAnswers[3].Add("Viserion");
-        quizAnswers[3].Add("Viserys");
-        quizAnswers[3].Add("Rhaegal");
-        quizAnswers[3].Add("Drogon");
-        //-------------------------
-        quizAnswers[4].Add("");
-        quizAnswers[4].Add("");
-        quizAnswers[4].Add("");
-        quizAnswers[4].Add("");
-        //------------------------
-        quizAnswers[5].Add("");
-        quizAnswers[5].Add("");
-        quizAnswers[5].Add("");
-        quizAnswers[5].Add("");
-        //-----------------------
-        quizAnswers[6].Add("");
-        quizAnswers[6].Add("");
-        quizAnswers[6].Add("");
-        quizAnswers[6].Add("");
-        //------------------------
+        quizAnswers[1] = new List<string> { "Hodor", "Hold the door", "I'm holding the door", "Save me" };
+        quizAnswers[2] = new List<string> { "Jorah Mormont", "Aemon", "Jeor Mormont", "Alliser Thorne" };
+        quizAnswers[3] = new List<string> { "Viserion", "Viserys", "Rhaegal", "Drogon" };
     }
 }
