@@ -10,4 +10,5 @@ public class Program
         QuizManager quizManager = new QuizManager(quiz);
         quizManager.StartQuiz();
     }
+
 }

@@ -1,3 +1,4 @@
+
 namespace GotQuiz;
 public class Quiz
 {
@@ -9,7 +10,6 @@ public class Quiz
     {
         // AddQuestion();
         // AddAnswer();
-
     }
 
     public void AddQuestion(int questionId, string question)

@@ -48,7 +48,7 @@ public class QuizManager
             }
             else
             {
-                Console.WriteLine("invalid input. Gathering next questiom.\n");
+                Console.WriteLine("invalid input. Gathering next question.\n");
             }
         }
 
