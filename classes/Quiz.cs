@@ -5,9 +5,6 @@ namespace GotQuiz;
 public class Quiz
 {
     public Dictionary<int, QuizQuestion> Questions { get; } = new();
-    // public Dictionary<int, string> quizQuestion = new Dictionary<int, string>();
-    // public Dictionary<int, List<string>> quizAnswers = new Dictionary<int, List<string>>();
-    // public Dictionary<int, string> correctAnswers = new Dictionary<int, string>();
 
     public Quiz()
     {
@@ -21,7 +18,6 @@ public class Quiz
                 new Answer (2, "Hold the door"),
                 new Answer (3, "I'm holding the door"),
                 new Answer (4, "Save me")
-
             },
             CorrectAnswerId = 1
         });
@@ -35,7 +31,6 @@ public class Quiz
                 new Answer (2, "Aemon"),
                 new Answer (3, "Jeor Mormont"),
                 new Answer (4, "Alliser Thorne")
-
             },
             CorrectAnswerId = 3
         });
@@ -49,7 +44,32 @@ public class Quiz
                 new Answer (2, "Viserys"),
                 new Answer (3, "Viserion"),
                 new Answer (4, "Rhaegal")
-
+            },
+            CorrectAnswerId = 4
+        });
+        AddQuestion(new QuizQuestion
+        {
+            Id = 4,
+            Text = "What the real name of Jon Snow?",
+            Answers = 
+            {
+                new Answer (1, "Aerys Targaryen"),
+                new Answer (2, "Aegon Targaryen"),
+                new Answer (3, "Viserys Targaryen"),
+                new Answer (4, "Rhaegar Targaryen")
+            },
+            CorrectAnswerId = 2
+        });
+        AddQuestion(new QuizQuestion
+        {
+            Id = 4,
+            Text = "What is the real meaning of 'Valar Morghulis'?",
+            Answers = 
+            {
+                new Answer (1, "Power is power"),
+                new Answer (2, "The night is dark and full of terrors"),
+                new Answer (3, "Winter is coming"),
+                new Answer (4, "All men must die")
             },
             CorrectAnswerId = 4
         });
