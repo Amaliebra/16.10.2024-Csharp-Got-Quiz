@@ -28,7 +28,7 @@ public class QuizManager
             }
 
             Console.Write("\nEnter the number of your answer: ");
-            string userInput = Console.ReadLine();
+            string userInput = Console.ReadLine()?.Trim() ?? "You need to type a number";
 
             int userAnswerIndex;
             bool validInput = int.TryParse(userInput, out userAnswerIndex) && userAnswerIndex > 0 && userAnswerIndex <= answers.Count;
