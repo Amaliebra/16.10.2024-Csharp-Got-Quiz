@@ -92,7 +92,7 @@ namespace GotQuiz
         public class QuizQuestion
         {
             public int Id {get; set;}
-            public string Text {get; set;}
+            public string Text {get; set;} = null!;
             public List<Answer> Answers {get;} = new();
             public int CorrectAnswerId {get; set;}
             
