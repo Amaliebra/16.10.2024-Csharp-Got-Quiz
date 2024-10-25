@@ -12,6 +12,7 @@ namespace GotQuiz
         {
             Quiz quiz = new Quiz();
             int userScore = 0;
+            int totalQuestions = quiz.Questions.Count;
 
             Console.WriteLine("Welcome to the quiz about the Game of thrones universe");
 
@@ -19,7 +20,7 @@ namespace GotQuiz
             {
                 int questionId = question.Key;
                 string questionText = question.Value.Text;
-                List<string> answers = question.Value.Answers.Select(a => a.Text)ToList();
+                List<string> answers = question.Value.Answers.Select(a => a.Text).ToList();
 
                 Console.WriteLine($"\n Question {questionId}: {questionText}");
 
@@ -62,7 +63,7 @@ namespace GotQuiz
                 }
             }
 
-            Console.WriteLine($"You finished the quiz, with a score of: {userScore}/{quiz.Question.Count}");
+            Console.WriteLine($"You finished the quiz, with a score of: {userScore}/{totalQuestions}");
         }
     }
 

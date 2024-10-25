@@ -1,4 +1,4 @@
-namespace GotQuiz;
+namespace GotQuiz
 {
     public class Quiz
     {
@@ -60,7 +60,7 @@ namespace GotQuiz;
             });
             AddQuestion(new QuizQuestion
             {
-                Id = 4,
+                Id = 5,
                 Text = "What is the real meaning of 'Valar Morghulis'?",
                 Answers = 
                 {
@@ -78,11 +78,14 @@ namespace GotQuiz;
             Questions.Add(question.Id, question);
         }
 
-        public void AddAnswer(int questionId, string Answer)
+        public void AddAnswer(int questionId, string answerText)
         {
             if(!Questions.ContainsKey(questionId))
+            {
                 throw new ArgumentException("Question id not found");
-            Questions[questionId].Answers.Add(Answer);
+            }
+
+            Questions[questionId].Answers.Add(new Quiz.Answer(questionId, answerText));
             
         }
 
