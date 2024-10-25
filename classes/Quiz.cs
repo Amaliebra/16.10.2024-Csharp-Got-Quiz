@@ -78,11 +78,11 @@ namespace GotQuiz;
             Questions.Add(question.Id, question);
         }
 
-        public void AddAnswer(int questionId, string answer)
+        public void AddAnswer(int questionId, string Answer)
         {
             if(!Questions.ContainsKey(questionId))
                 throw new ArgumentException("Question id not found");
-            Questions[questionId].Answers.Add(answer);
+            Questions[questionId].Answers.Add(Answer);
             
         }
 
@@ -92,6 +92,7 @@ namespace GotQuiz;
             public string Text {get; set;}
             public List<Answer> Answers {get;} = new();
             public int CorrectAnswerId {get; set;}
+            
         }
 
         public class Answer 

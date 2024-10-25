@@ -15,11 +15,11 @@ namespace GotQuiz
 
             Console.WriteLine("Welcome to the quiz about the Game of thrones universe");
 
-            foreach (var question in Quiz.QuizQuestion)
+            foreach (var question in quiz.Questions)
             {
                 int questionId = question.Key;
-                string questionText = quiz.quizQuestion[questionId];
-                List<string> answers = quiz.quizAnswers[questionId];
+                string questionText = question.Value.Text;
+                List<string> answers = question.Value.Answers.Select(a => a.Text)ToList();
 
                 Console.WriteLine($"\n Question {questionId}: {questionText}");
 
@@ -37,14 +37,23 @@ namespace GotQuiz
                 if (validInput)
                 {
                     string selectedAnswer = answers[userAnswerIndex - 1];
-                    if (selectedAnswer == quiz.[questionId])
+                    var answer = quiz.Questions[questionId].Answers.FirstOrDefault(a => a.Id == question.Value.CorrectAnswerId);
+                    if ( answer != null)
                     {
-                        Console.WriteLine("correct!\n");
-                        userScore++;
+                        if (selectedAnswer == answer.Text)
+                        {
+                            Console.WriteLine("Correct\n");
+                            userScore++;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Wrong answer\n");
+                        }
+
                     }
                     else
                     {
-                        Console.WriteLine($"Incorrect.");
+                        Console.WriteLine("no answer found with this 'CorrectAnswerId'");
                     }
                 }
                 else
@@ -53,7 +62,7 @@ namespace GotQuiz
                 }
             }
 
-            Console.WriteLine($"You finished the quiz, with a score of: {userScore}/{quiz.quizQuestion.Count}");
+            Console.WriteLine($"You finished the quiz, with a score of: {userScore}/{quiz.Question.Count}");
         }
     }
 
